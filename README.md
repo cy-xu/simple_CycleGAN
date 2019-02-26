@@ -2,13 +2,11 @@
 
 Great thanks to [Jun-Yan Zhu](https://github.com/junyanz) et al. for their contribution of the CycleGAN paper. Original project and paper - 
 
-<img src="https://junyanz.github.io/CycleGAN/images/teaser_high_res.jpg" width="600"/>
-
 **CycleGAN: [Project](https://junyanz.github.io/CycleGAN/) |  [Paper](https://arxiv.org/pdf/1703.10593.pdf) |  [Torch](https://github.com/junyanz/CycleGAN)**
 
-The code is adopted from the authors' implementation but simplified into just a few files. It runs on PyTorch 0.4 and 1.0.
+<img src="https://junyanz.github.io/CycleGAN/images/teaser_high_res.jpg" width="600"/>
 
-If you use this code for your research, please cite Jun-Yan Et al.:
+The code is adopted from the authors' implementation but simplified into just a few files. If you use this code for your research, please cite Jun-Yan Et al.:
 
 Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks.<br>
 [Jun-Yan Zhu](https://people.eecs.berkeley.edu/~junyanz/)\*,  [Taesung Park](https://taesung.me/)\*, [Phillip Isola](https://people.eecs.berkeley.edu/~isola/), [Alexei A. Efros](https://people.eecs.berkeley.edu/~efros). In ICCV 2017. (* equal contributions) [[Bibtex]](https://junyanz.github.io/CycleGAN/CycleGAN.txt)
@@ -25,7 +23,7 @@ Image-to-Image Translation with Conditional Adversarial Networks.<br>
 ## Getting Started
 ### Installation
 
-- Install [PyTorch](http://pytorch.org and) 0.4+ with GPU support.
+- Install [PyTorch](http://pytorch.org and) 0.4+ (1.0 tested) with GPU support.
 - Clone this repo:
 ```bash
     git clone https://github.com/cy-xu/simple_CycleGAN
