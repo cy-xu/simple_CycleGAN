@@ -2,8 +2,9 @@
 
 Great thanks to [Jun-Yan Zhu](https://github.com/junyanz) et al. for their contribution of the CycleGAN paper. Original project and paper - 
 
+<img src="https://junyanz.github.io/CycleGAN/images/teaser_high_res.jpg" width="600"/>
+
 **CycleGAN: [Project](https://junyanz.github.io/CycleGAN/) |  [Paper](https://arxiv.org/pdf/1703.10593.pdf) |  [Torch](https://github.com/junyanz/CycleGAN)**
-<img src="https://junyanz.github.io/CycleGAN/images/teaser_high_res.jpg" width="400"/>
 
 The code is adopted from the authors' implementation but simplified into just a few files. It runs on PyTorch 0.4 and 1.0.
 
