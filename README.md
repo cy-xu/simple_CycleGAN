@@ -1,15 +1,11 @@
-<img src='imgs/horse2zebra.gif' align="right" width=384>
-
-<br><br><br>
-
 # Simplified CycleGAN Implementation in PyTorch
 
-Great thanks to [Jun-Yan Zhu](https://github.com/junyanz) Et al. for the CycleGAN paper. Original project and paper - 
+Great thanks to [Jun-Yan Zhu](https://github.com/junyanz) et al. for their contribution of the CycleGAN paper. Original project and paper - 
 
 **CycleGAN: [Project](https://junyanz.github.io/CycleGAN/) |  [Paper](https://arxiv.org/pdf/1703.10593.pdf) |  [Torch](https://github.com/junyanz/CycleGAN)**
-<img src="https://junyanz.github.io/CycleGAN/images/teaser_high_res.jpg" width="800"/>
+<img src="https://junyanz.github.io/CycleGAN/images/teaser_high_res.jpg" width="400"/>
 
-The code is adopted from the authors' implementation but simplified into just a few files.It runs on PyTorch 0.4 and 1.0.
+The code is adopted from the authors' implementation but simplified into just a few files. It runs on PyTorch 0.4 and 1.0.
 
 If you use this code for your research, please cite Jun-Yan Et al.:
 
@@ -28,13 +24,12 @@ Image-to-Image Translation with Conditional Adversarial Networks.<br>
 ## Getting Started
 ### Installation
 
+- Install [PyTorch](http://pytorch.org and) 0.4+ with GPU support.
 - Clone this repo:
 ```bash
-git clone https://github.com/cy-xu/simple_CycleGAN
-cd simple_CycleGAN
+    git clone https://github.com/cy-xu/simple_CycleGAN
+    cd simple_CycleGAN
 ```
-
-- Install [PyTorch](http://pytorch.org and) 0.4+ with GPU support.
 - The command `pip install -r requirements.txt` will install all required dependencies.
 
 ### CycleGAN train/test
@@ -62,7 +57,7 @@ cd simple_CycleGAN
 Follow the naming pattern of `trainA`, `trainB`, `testA`, and place them in `datasets\your_dataset\`. You can also change directories inside `simple_cygan.py`.
 
 ## Citation
-If you use this code for your research, please cite Jun-Yan Et al's papers.
+If you use this code for your research, please cite Jun-Yan et al's papers.
 ```
 @inproceedings{CycleGAN2017,
   title={Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networkss},
