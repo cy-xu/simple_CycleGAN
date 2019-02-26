@@ -156,14 +156,10 @@ def train(**kwargs):
     # identical loss
     criterionIdt = nn.L1Loss()
 
-    # noise image loss
-    criterionMSE = nn.MSELoss()
-
 
     # loss meters
     loss_X_meter = MovingAverageValueMeter(opt.plot_every)
     loss_Y_meter = MovingAverageValueMeter(opt.plot_every)
-    noise_meter = MovingAverageValueMeter(opt.plot_every)
     score_Dx_real_y = MovingAverageValueMeter(opt.plot_every)
     score_Dx_fake_y = MovingAverageValueMeter(opt.plot_every)
 
@@ -201,11 +197,6 @@ def train(**kwargs):
             # Forward cycle loss x^ = || G_y(G_x(real_x)) ||
             loss_cycle_X = criterionCycle(x_hat, real_x) * lambda_X
 
-            # new loss for stable video, noise loss
-            loss_noise_y = criterionMSE(noisy_fake_y, fake_y)
-            # loss_noise_print = float(loss_noise_y.data.clone())
-            # print(f'loss noise = {loss_noise_print}')
-
             # identity loss
             if lambda_identity > 0:
                 # netG_x should be identity if real_y is fed: ||netG_x(real_y) - real_y||
@@ -214,12 +205,11 @@ def train(**kwargs):
             else:
                 loss_idt_x = 0.
 
-            loss_X = loss_G_X + loss_cycle_X + loss_idt_x + loss_noise_y
+            loss_X = loss_G_X + loss_cycle_X + loss_idt_x
             loss_X.backward(retain_graph=True)
             optimizer_g.step()
 
             loss_X_meter.add(loss_X.item())
-            noise_meter.add(loss_noise_y.item())
 
             ######################
             # Y -> X' -> Y^ cycle
@@ -303,7 +293,6 @@ def train(**kwargs):
 
                 losses['loss_X'] = loss_X_meter.value()[0]
                 losses['loss_Y'] = loss_Y_meter.value()[0]
-                losses['loss_noise'] = noise_meter.value()[0]
                 scores['score_Dx_real_y'] = score_Dx_real_y.value()[0]
                 scores['score_Dx_fake_y'] = score_Dx_fake_y.value()[0]
                 print(losses)
