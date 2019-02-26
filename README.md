@@ -23,7 +23,7 @@ Image-to-Image Translation with Conditional Adversarial Networks.<br>
 ## Getting Started
 ### Installation
 
-- Install [PyTorch](http://pytorch.org and) 0.4+ (1.0 tested) with GPU support.
+- Install [PyTorch](http://pytorch.org) 0.4+ (1.0 tested) with GPU support.
 - Clone this repo:
 ```bash
     git clone https://github.com/cy-xu/simple_CycleGAN
